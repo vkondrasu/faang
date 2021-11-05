@@ -1,2 +1,6 @@
 # all class files
 *.class
+
+#all jar and war files
+*.jar
+*.war
