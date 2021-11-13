@@ -1,0 +1,8 @@
+A monotonic stack is simply a stack where the elements are always in sorted order. How does this help us? We can use a monotonic decreasing stack to hold temperatures. Monotonic decreasing means that the stack will always be sorted in descending order. Because the problem is asking for the number of days, instead of storing the temperatures themselves, we should store the indices of the days, and use temperatures[i] to find the temperature of the i^{th}i 
+th
+  day.
+
+Monotonic stacks are a good option when a problem involves comparing the size of numeric elements, with their order being relevant.
+
+Related problems
+https://leetcode.com/tag/monotonic-stack/
