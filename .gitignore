@@ -4,3 +4,8 @@
 #all jar and war files
 *.jar
 *.war
+
+#python cache folder and .pyc files
+
+__pycache__/*
+*.pyc
