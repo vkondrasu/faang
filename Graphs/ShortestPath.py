@@ -35,16 +35,16 @@ class ShortestPath:
 
 
     def getPath(self, s, e, prev):
-        path = []
+        path = [e]
         at = e
         while prev[at] is not None:
-            print( "checking ", at)
+            #print( "checking ", at)
             path.append(prev[at])
             at = prev[at]
 
         path.reverse()
 
-        print(path)
+        #print(path)
 
         if path[0] == s:
             return path
@@ -60,7 +60,7 @@ class ShortestPath:
 
 
 s = ShortestPath()
-path = s.finsShortestPath(0,13,[[8],[5],[9],[9],[0],[16,17],[11],[6],[4,14],[15],[],[7],[],[0],[0,13],[2,10],[],[]])
+path = s.finsShortestPath(1,17,[[8],[5],[9],[9],[0],[16,17],[11],[6],[4,14],[15],[],[7],[],[0],[0,13],[2,10],[],[]])
 print(path)
 
         
