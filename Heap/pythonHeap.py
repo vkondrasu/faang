@@ -24,3 +24,29 @@ maxHeap = [-x for x in maxHeap]
 heapq.heapify(maxHeap)
 print([-x for x in maxHeap])
 
+#5.
+#inserting an elment into the heaps
+heapq.heappush(minHeap, 5)
+heapq.heappush(maxHeap, 5 * -1)
+print(minHeap)
+print([-x for x in maxHeap])
+
+#6.
+#Getting top of the heap
+print(minHeap[0])
+print(maxHeap[0] * -1)
+
+#7.
+#Delete top of the heap
+heapq.heappop(minHeap)
+heapq.heappop(maxHeap)
+
+print(minHeap)
+print([-x for x in maxHeap])
+
+#8
+#length of heap
+print(len(minHeap))
+print(len(maxHeap))
+
+
