@@ -32,8 +32,30 @@ def scoring_optionsDP(n):
   return need(n)
 
 
+def scoring_optionsDPIterative(n):
+    pass
+    result = [0,1,2,3,6]
+
+    if n<= 0:
+        return 0
+
+    if n <= 4:
+        return result[n]
+
+    for i in range(5,n+1):
+        result.append(result[i-4] + result[i-2] + result[i-1])
+
+    return result[-1]
+
+
 assert(scoring_options(4) == 6)
 assert(scoring_options(5) == 10)
+assert(scoring_options(6) == 18)
 
 assert(scoring_optionsDP(4) == 6)
 assert(scoring_optionsDP(5) == 10)
+assert(scoring_optionsDP(6) == 18)
+
+assert(scoring_optionsDPIterative(4) == 6)
+assert(scoring_optionsDPIterative(5) == 10)
+assert(scoring_optionsDPIterative(6) == 18)
