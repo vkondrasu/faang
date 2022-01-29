@@ -2,6 +2,11 @@
 LC 208. Implement Trie (Prefix Tree)
 '''
 
+'''
+'a'->'p'->'p'->'l'->'e' (endOfWord = True children{}) is a TrieNode()
+'b'->TrieNode
+'''
+
 class TrieNode:
     def __init__(self):
         self.children = {}
