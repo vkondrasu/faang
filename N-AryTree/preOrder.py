@@ -2,6 +2,11 @@
 LC 589. N-ary Tree Preorder Traversal
 '''
 
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
         self.result = []
@@ -14,3 +19,11 @@ class Solution:
                 
         traversePre(root)
         return self.result
+
+    def preOrderRecursive(self, root):
+        st, op = [root] , []
+
+        while st:
+            node = st.pop()
+            op.append(node.val)
+            st.extend(node.children[::-1])
