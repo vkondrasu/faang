@@ -3,7 +3,7 @@ LC 518. Coin Change 2
 '''
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
-        
+        '''
         def dfs(i, a):
             if a == amount:
                 return 1
@@ -22,3 +22,13 @@ class Solution:
         n = len(coins)
         dp = {}
         return dfs(0,0)
+        '''
+        dp = [0] * (amount + 1)
+        dp[0] = 1 #if we have reached 0 then that is 1 way
+        
+        for coin in coins:
+            for x in range(coin, amount + 1):
+                #no.of ways x can be summed is all the ways
+                #x-coin can be summed
+                dp[x] += dp[x - coin]
+        return dp[amount]
