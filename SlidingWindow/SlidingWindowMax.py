@@ -10,6 +10,7 @@ class Solution:
 
         while r < n:
             #maintain q elements in decreasing order
+            #such that we always have the current window max at the start q[0] of the q
             while q and nums[q[-1]] < nums[r]:
                 q.pop()
             q.append(r)
